@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "764122592903",
+    "firebase_url": "https://ssoft-vistoria-default-rtdb.firebaseio.com",
+    "project_id": "ssoft-vistoria",
+    "storage_bucket": "ssoft-vistoria.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764122592903:android:d70dbc13a429cdb160ea22",
+        "android_client_info": {
+          "package_name": "com.ssoft.ssoft_vistoria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764122592903-qmd4rrtaq1n99j7i4klbacitprnlkr3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPvpH2oEhTFKOm1FpdBYzubYRYQ_6sqd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764122592903-qmd4rrtaq1n99j7i4klbacitprnlkr3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
