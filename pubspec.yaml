@@ -54,6 +54,7 @@ dependencies:
   flutter_native_splash: ^2.2.15
   flutter_pdfview: ^1.2.5
   share_plus: ^6.3.0
+  gsheets: ^0.4.2
 
 dev_dependencies:
   flutter_test:

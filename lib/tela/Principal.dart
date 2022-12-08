@@ -16,7 +16,7 @@ void main() {
       MultiProvider(
         providers: [
           Provider<Controller>(
-            create: (_) => Controller(),
+            create: (BuildContext context) => Controller(),
           )
         ],
         child: MaterialApp(

@@ -2211,7 +2211,7 @@ class _AbaFerramentasState extends State<AbaFerramentas> {
                                 hoverColor: Colors.white,
                                 borderRadius: BorderRadius.all(Radius.circular(12)),
                                 onTap: (){
-                                  controller_mobx.mudar_tela(1);
+                                  salvar_dados();
                                 },
                                 child: Align(
                                   alignment: Alignment.center,
@@ -2236,5 +2236,28 @@ class _AbaFerramentasState extends State<AbaFerramentas> {
         );
       },
     );
+  }
+  salvar_dados(){
+    if(controller_mobx.ferramentas_furadeira.isEmpty ||
+        controller_mobx.ferramentas_parafusadeira.isEmpty ||
+        controller_mobx.ferramentas_escada_fibra.isEmpty ||
+        controller_mobx.ferramentas_escada_madeira.isEmpty ||
+        controller_mobx.ferramentas_cones.isEmpty ||
+        controller_mobx.ferramentas_alicates.isEmpty ||
+        controller_mobx.ferramentas_kit_conector.isEmpty ||
+        controller_mobx.ferramentas_extensao.isEmpty ||
+        controller_mobx.ferramentas_cinto.isEmpty ||
+        controller_mobx.ferramentas_luva_bt.isEmpty ||
+        controller_mobx.ferramentas_linha_vida.isEmpty ||
+        controller_mobx.ferramentas_fusimec.isEmpty){
+      final snackBar = SnackBar(
+        content: const Text('Existem campos obrigatórios não preenchidos. Verifique e tente novamente'),
+        backgroundColor: cores.cor_accent,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+    else{
+      controller_mobx.mudar_tela(1);
+    }
   }
 }

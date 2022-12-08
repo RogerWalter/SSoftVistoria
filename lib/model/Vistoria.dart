@@ -80,13 +80,13 @@ class Vistoria{
     _condutor = value;
   }
 
-  recuperar_vistorias() async{
+  recuperar_vistorias(String filial) async{
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
     List<Vistoria> _listaItens = [];
     final ref = FirebaseDatabase.instance.ref();
-    final snapshot = await ref.child("vistoria").get();
+    final snapshot = await ref.child(filial).child("vistoria").get();
     if (snapshot.exists) {
       final json = snapshot.value as Map<dynamic, dynamic>;
       for(DataSnapshot ds in snapshot.children)

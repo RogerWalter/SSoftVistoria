@@ -11,11 +11,13 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:gsheets/gsheets.dart';
 import 'package:provider/provider.dart';
 import 'package:signature/signature.dart';
 import '../firebase_options.dart';
 import '../model/Vistoria.dart';
 import '../util/Controller.dart';
+import '../util/Planilha.dart';
 import '../util/Util.dart';
 import 'package:intl/intl.dart';
 import 'Principal.dart';
@@ -30,6 +32,8 @@ class _AbaFimState extends State<AbaFim> {
   Util cores = Util();
   Controller controller_mobx = Controller();
   var pdf_gerado;
+  Planilha planilha = Planilha();
+
   @override
   void didChangeDependencies() {
     // TODO: implement didChangeDependencies
@@ -69,7 +73,9 @@ class _AbaFimState extends State<AbaFim> {
   finalizar_vistoria() async{
     await gerar_pdf();
     await salvar_dados_vistoria_firebase();
-    controller_mobx = Controller();
+    /*Controller controller_novo = Controller();
+    controller_mobx = controller_novo;*/
+    controller_mobx.alterar_vistoria_finalizada(true);
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -3438,14 +3444,24 @@ class _AbaFimState extends State<AbaFim> {
     vistoria.veiculo = controller_mobx.modelo_veiculo;
     vistoria.placa = controller_mobx.placa;
     vistoria.link = link_download;
-    DatabaseReference ref_vistoria = FirebaseDatabase.instance.ref("vistoria").child(nome_pdf);
+    DatabaseReference ref_vistoria = FirebaseDatabase.instance.ref(controller_mobx.filial_atual).child("vistoria").child(nome_pdf);
     final json = vistoria.toJson();
     await ref_vistoria.set(json);
+    //salvar dados da vistoria na planilha
+    List<String> vistoria_salvar = [];
+    vistoria_salvar.add(vistoria.identificacao);
+    vistoria_salvar.add(vistoria.data);
+    vistoria_salvar.add(vistoria.placa);
+    vistoria_salvar.add(vistoria.veiculo);
+    vistoria_salvar.add(vistoria.vistoriador);
+    vistoria_salvar.add(vistoria.condutor);
+    vistoria_salvar.add(vistoria.link);
+    await planilha_salvar_vistoria(vistoria_salvar);
   }
 
   fazer_upload_pdf(String nome) async{
     final storageRef = FirebaseStorage.instance.ref();
-    final saidaRef = storageRef.child("vistoria/" + nome);
+    final saidaRef = storageRef.child(controller_mobx.filial_atual).child("vistoria/" + nome);
     String link_download_pdf = "";
     try {
       await saidaRef.putFile(pdf_gerado);
@@ -3454,5 +3470,12 @@ class _AbaFimState extends State<AbaFim> {
       print("Erro no upload do pdf");
     }
     return link_download_pdf;
+  }
+
+  planilha_salvar_vistoria(List<String> salvar) async{
+    final gsheets = GSheets(planilha.credentials);
+    final ss = await gsheets.spreadsheet(planilha.spreadsheetId);
+    var sheet = ss.worksheetByTitle(controller_mobx.filial_atual);
+    await sheet!.values.appendRow([salvar[0], salvar[1], salvar[2], salvar[3], salvar[4], salvar[5], salvar[6]]);
   }
 }

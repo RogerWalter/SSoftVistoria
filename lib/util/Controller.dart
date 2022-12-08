@@ -22,6 +22,9 @@ class Controller = ControllerBase with _$Controller;
 
 abstract class ControllerBase with Store{
   @observable
+  String filial_atual = "SBS";
+
+  @observable
   List<Widget> abas = <Widget>[
     AbaDados(),
     AbaInfosIniciais(),
@@ -826,10 +829,100 @@ abstract class ControllerBase with Store{
   preenche_lista_vistoria() async{
     Vistoria item = Vistoria();
     lista_vistorias.clear();
-    lista_vistorias = await item.recuperar_vistorias();
+    lista_vistorias = await item.recuperar_vistorias(filial_atual);
   }
   @action
   adiciona_item_lista_pesquisa(Vistoria add) async{
     lista_pesquisa_vistorias.add(add);
+  }
+
+  //FINALIZAR VISTORIA
+  @observable
+  bool vistoria_finalizada = false;
+  @action
+  alterar_vistoria_finalizada(bool valor){
+    vistoria_finalizada = valor;
+    if(valor){
+      data = "";
+      vistoriador = "";
+      condutor = "";
+      modelo_veiculo = "";
+      placa = "";
+      indice_tela = 0;
+      providencias_a_tomar.clear();
+      infos_iniciais_doc_atualizado = "";
+      infos_iniciais_multas = "";
+      infos_iniciais_km_atual = "";
+      infos_iniciais_foto_doc = null;
+      infos_iniciais_foto_hod = null;
+      infos_iniciais_foto_dianteira = null;
+      infos_iniciais_foto_traseira = null;
+      infos_iniciais_foto_lat_dir = null;
+      infos_iniciais_foto_lat_esq = null;
+      infos_iniciais_foto_interior = null;
+      infos_iniciais_foto_porta_malas = null;
+      luzes_lanterna = "";
+      luzes_freio = "";
+      luzes_placa = "";
+      luzes_re = "";
+      luzes_setas_dianteiras = "";
+      luzes_setas_traseiras = "";
+      luzes_farol = "";
+      freios_de_mao = "";
+      freios_pedal = "";
+      pneus_balanceamento = "";
+      pneus_frontal_direito = "";
+      pneus_frontal_esquerdo = "";
+      pneus_traseiro_direito = "";
+      pneus_traseiro_esquerdo = "";
+      pneus_step = "";
+      pneus_foto_fro_dir = null;
+      pneus_foto_fro_esq = null;
+      pneus_foto_tra_dir = null;
+      pneus_foto_tra_esq = null;
+      pneus_foto_step = null;
+      motor_aspecto = "";
+      motor_funcionamento = "";
+      motor_oleo = "";
+      motor_agua = "";
+      motor_fluido_freio = "";
+      motor_bateria = "";
+      motor_foto_motor = null;
+      motor_foto_etiqueta_oleo = null;
+      motor_foto_bateria = null;
+      interior_limpeza = "";
+      interior_cinto = "";
+      interior_painel = "";
+      interior_tapetes = "";
+      interior_bancos = "";
+      interior_macaco = "";
+      exterior_limpeza = "";
+      exterior_ima = "";
+      exterior_suspensao = "";
+      exterior_escapamento = "";
+      exterior_trava = "";
+      exterior_fechaduras = "";
+      exterior_fechadura_tanque = "";
+      exterior_limpador_dianteiro = "";
+      exterior_limpador_traseiro = "";
+      exterior_parabrisa = "";
+      exterior_rack = "";
+      avaria_lista.clear();
+      conclusao_controller_assinatura.clear();
+      conclusao_imagem_assinatura = null;
+      conclusao_obs_condutor = "";
+      ferramentas_furadeira = "";
+      ferramentas_parafusadeira = "";
+      ferramentas_escada_fibra = "";
+      ferramentas_escada_madeira = "";
+      ferramentas_cones = "";
+      ferramentas_alicates = "";
+      ferramentas_kit_conector = "";
+      ferramentas_extensao = "";
+      ferramentas_cinto = "";
+      ferramentas_luva_bt = "";
+      ferramentas_linha_vida = "";
+      ferramentas_fusimec = "";
+    }
   }
 }

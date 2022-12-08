@@ -743,26 +743,24 @@ class _AbaMotorState extends State<AbaMotor> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(1);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.motor_foto_motor == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.motor_foto_motor)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(1);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.motor_foto_motor == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.motor_foto_motor)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -792,26 +790,24 @@ class _AbaMotorState extends State<AbaMotor> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(2);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.motor_foto_etiqueta_oleo == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.motor_foto_etiqueta_oleo)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(2);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.motor_foto_etiqueta_oleo == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.motor_foto_etiqueta_oleo)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -850,26 +846,24 @@ class _AbaMotorState extends State<AbaMotor> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(3);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.motor_foto_bateria == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.motor_foto_bateria)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(3);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.motor_foto_bateria == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.motor_foto_bateria)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -899,26 +893,24 @@ class _AbaMotorState extends State<AbaMotor> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor:  Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor:  Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
 
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: Icon(Icons.add, color:  Colors.transparent, size: 50,)
-                                            ),
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: Icon(Icons.add, color:  Colors.transparent, size: 50,)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )

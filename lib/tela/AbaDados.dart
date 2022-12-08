@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:ssoft_vistoria/util/Util.dart';
+import 'package:ssoft_vistoria/tela/Principal.dart';
 
 import '../util/Controller.dart';
 class AbaDados extends StatefulWidget {
@@ -366,6 +367,15 @@ class _AbaDadosState extends State<AbaDados> {
     else{
       controller_mobx.salvar_dados_iniciais(_controller_data.text, _controller_vistoriador.text, _controller_condutor.text, _controller_modelo.text, _controller_placa.text);
       controller_mobx.mudar_tela(1);
+      /*Controller controller_novo = Controller();
+      //controller_mobx = controller_novo;
+      controller_mobx.alterar_vistoria_finalizada(true);
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => Main()
+          )
+      );*/
     }
   }
 }

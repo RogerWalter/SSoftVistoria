@@ -9,6 +9,38 @@ part of 'Controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$Controller on ControllerBase, Store {
+  late final _$filial_atualAtom =
+      Atom(name: 'ControllerBase.filial_atual', context: context);
+
+  @override
+  String get filial_atual {
+    _$filial_atualAtom.reportRead();
+    return super.filial_atual;
+  }
+
+  @override
+  set filial_atual(String value) {
+    _$filial_atualAtom.reportWrite(value, super.filial_atual, () {
+      super.filial_atual = value;
+    });
+  }
+
+  late final _$vistoria_finalizadaAtom =
+      Atom(name: 'ControllerBase.vistoria_finalizada', context: context);
+
+  @override
+  bool get vistoria_finalizada {
+    _$vistoria_finalizadaAtom.reportRead();
+    return super.vistoria_finalizada;
+  }
+
+  @override
+  set vistoria_finalizada(bool value) {
+    _$vistoria_finalizadaAtom.reportWrite(value, super.vistoria_finalizada, () {
+      super.vistoria_finalizada = value;
+    });
+  }
+
   late final _$abasAtom = Atom(name: 'ControllerBase.abas', context: context);
 
   @override
@@ -1459,6 +1491,17 @@ mixin _$Controller on ControllerBase, Store {
       ActionController(name: 'ControllerBase', context: context);
 
   @override
+  dynamic alterar_vistoria_finalizada(bool valor) {
+    final _$actionInfo = _$ControllerBaseActionController.startAction(
+        name: 'ControllerBase.alterar_vistoria_finalizada');
+    try {
+      return super.alterar_vistoria_finalizada(valor);
+    } finally {
+      _$ControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   dynamic mudar_tela(int valor) {
     final _$actionInfo = _$ControllerBaseActionController.startAction(
         name: 'ControllerBase.mudar_tela');
@@ -2321,6 +2364,8 @@ mixin _$Controller on ControllerBase, Store {
   @override
   String toString() {
     return '''
+filial_atual: ${filial_atual},
+vistoria_finalizada: ${vistoria_finalizada},
 abas: ${abas},
 indice_tela: ${indice_tela},
 providencias_a_tomar: ${providencias_a_tomar},

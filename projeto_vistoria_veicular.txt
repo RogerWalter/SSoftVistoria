@@ -1,0 +1,124 @@
+Pedir Lista de Ferramentas para o Eugênio e perguntar:
+A vistoria de ferramentas ficará junta com a veicular ou deverão ser vistorias separadas?
+------------------------------
+Menu Principal
+	-Nova Vistoria
+	-Visualizar Vistorias Anteriores
+------------------------------
+
+#Nova Vistoria#
+
+Dados da Vistoria
+	-Data e Hora
+	-Vistoriador
+	-Condutor
+	-Veículo
+
+Informações Iniciais
+	-Documento Atualizado?
+	-Multas?
+	-KM Atual
+	-Foto do Documento
+	-Foto Hodômetro
+	-Foto Dianteira
+	-Foto Traseira
+	-Foto Lateral Direita
+	-Foto Lateral Esquerda
+	-Foto Interior
+	-Foto Porta Malas
+
+Ferramentas e EPI's
+	-Furadeira
+	-Parafusadeira
+	-Escada de Fibra
+	-Escada de Madeira
+	-Cones
+	-Alicates
+	-Kit Conectorização
+	-Fusimec
+	-Extensão Elétrica
+	-Cinto
+	-Luva de BT
+	-Linha de Vida
+
+Luzes
+	-Lanterna
+	-Luz de Freio
+	-Luz da Placa
+	-Luz de Ré
+	-Setas Dianteiras
+	-Setas Traseiras
+	-Farol
+
+Freios
+	-Freio de Mão
+	-Pedal
+
+Pneus
+	-Balanceamento
+	-Frontal Direito
+	-Foto Frontal Direito
+	-Frontal Esquerdo
+	-Foto Frontal Esquerdo
+	-Traseiro Direito
+	-Foto Traseiro Direito
+	-Traseiro Esquerdo
+	-Foto Traseiro Esquerdo
+	-Step
+	-Foto Step
+
+Motor
+	-Aspecto Geral do Motor
+	-Foto Motor
+	-Funcionamento
+	-Óleo
+	-Foto Etiqueta Troca de Óleo
+	-Água
+	-Fluído de Freio
+	-Bateria
+	-Foto Bateria
+
+Interior do Veículo
+	-Limpeza Interior (0 a 10)
+	-Cinto de Segurança
+	-Painel
+	-Tapeçaria
+	-Bancos
+	-Macaco
+
+Exterior do Veículo
+	-Limpeza Exterior (0 a 10)	
+	-Imã
+	-Suspensão
+	-Escapamento
+	-Trava de Segurança
+	-Fechaduras
+	-Fechaduras do Tanque
+	-Limpador Dianteiro
+	-Limpador Traseiro
+	-Para Brisa
+	-Rack para Escada
+
+Avarias no Veículo
+	-Local da Avaria (lista com todas as opções)
+	-Tipo da Avaria (risco, amassado, etc.)
+	-Foto
+	-Comentário
+
+Conclusão
+	-Providências a tomar
+	-Obs. Motorista
+	-Assinatura do técnico
+
+Após Salvar, é gerado PDF para exportação
+
+Orçamento:
+	->15H = Desenvolvimento de Telas
+	-> 2H = Testes e Validações
+	-> 3H = Refinamento
+	-> 5H = Problemas e Soluções
+	->25H x R$50,00 = R$1.250,00
+	->Convênio TECCEL = 60% OFF
+	->Valor do Projeto = R$500,00
+
+(libs: image_picker e signature)

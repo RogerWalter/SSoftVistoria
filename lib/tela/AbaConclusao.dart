@@ -24,11 +24,11 @@ class _AbaConclusaoState extends State<AbaConclusao> {
   FocusNode _foco_obs_motorista = FocusNode();
   Uint8List? _assinatura_gerada;
 
-  @override
+  /*@override
   void dispose() {
     controller_mobx.conclusao_controller_assinatura.dispose();
     super.dispose();
-  }
+  }*/
 
   @override
   void didChangeDependencies() {

@@ -7,8 +7,6 @@ import '../util/Controller.dart';
 import '../util/Util.dart';
 
 class NovaVistoria extends StatefulWidget {
-  const NovaVistoria({Key? key}) : super(key: key);
-
   @override
   State<NovaVistoria> createState() => _NovaVistoriaState();
 }

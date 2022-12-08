@@ -743,26 +743,24 @@ class _AbaPneusState extends State<AbaPneus> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(1);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.pneus_foto_fro_dir == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_fro_dir)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(1);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.pneus_foto_fro_dir == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_fro_dir)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -792,26 +790,24 @@ class _AbaPneusState extends State<AbaPneus> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(2);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.pneus_foto_fro_esq == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_fro_esq)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(2);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.pneus_foto_fro_esq == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_fro_esq)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -850,26 +846,24 @@ class _AbaPneusState extends State<AbaPneus> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(3);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.pneus_foto_tra_dir == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_tra_dir)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(3);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.pneus_foto_tra_dir == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_tra_dir)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -899,26 +893,24 @@ class _AbaPneusState extends State<AbaPneus> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(4);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.pneus_foto_tra_esq == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_tra_esq)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(4);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.pneus_foto_tra_esq == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_tra_esq)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -957,26 +949,24 @@ class _AbaPneusState extends State<AbaPneus> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor: cores.laranja_teccel.withOpacity(0.25),
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
-                                              tirar_foto(5);
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: (controller_mobx.pneus_foto_step == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_step)
-                                            ),
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor: cores.laranja_teccel.withOpacity(0.25),
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
+                                            tirar_foto(5);
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: (controller_mobx.pneus_foto_step == null) ? Icon(Icons.add, color: Colors.black26, size: 50,) : Image.file(controller_mobx.pneus_foto_step)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
@@ -1006,26 +996,24 @@ class _AbaPneusState extends State<AbaPneus> {
                               ),
                               child: Observer(
                                 builder: (_){
-                                  return Expanded(
-                                    child: Container(
-                                        height: 150,
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                                          child: InkWell(
-                                            splashColor:  Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            borderRadius: BorderRadius.circular(15),
-                                            onTap: (){
+                                  return Container(
+                                      height: 150,
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                                        child: InkWell(
+                                          splashColor:  Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          borderRadius: BorderRadius.circular(15),
+                                          onTap: (){
 
-                                            },
-                                            child: Align(
-                                                alignment: Alignment.center,
-                                                child: Icon(Icons.add, color:  Colors.transparent, size: 50,)
-                                            ),
+                                          },
+                                          child: Align(
+                                              alignment: Alignment.center,
+                                              child: Icon(Icons.add, color:  Colors.transparent, size: 50,)
                                           ),
-                                        )
-                                    ),
+                                        ),
+                                      )
                                   );
                                 },
                               )
